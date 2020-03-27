@@ -1,0 +1,265 @@
+/*
+  Name: style.css
+  Date: January 2013
+  Description: Layout and style of a simple webpage.
+  Version: 1.0
+*/
+ 
+/* Imports */
+@import url("reset.css");
+ 
+/* HTML5 tags */
+header, section, footer, nav, article, figure {
+  display: block;
+}
+/*---- Global ----*/
+  /* Body */
+  body {
+    background: #F5F4EF;
+    color: #000305;
+    text-align: left;
+    line-height: 1.429;  /* Line Spacing */
+    margin: 0;
+    padding: 0;
+    font-size: 87.5%; /* Base font size: 14px */
+    font-family: 'Trebuchet MS', 'Trebuchet', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
+  }
+ 
+  /* Headings */
+  h1 {font-size: 20px; line-height: 1; text-align: Left;}
+  h2 {font-size: 12px}  
+  h3 {font-size: 10px}  
+  h4 {font-size: 8px}
+  h5 {font-size: 7px; color: green;}
+ 
+  h2, h3, h4, h5 {
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: .8em;
+  }
+ 
+  /* Paragraphs */
+  p {margin-bottom: 1.143em;}
+ 
+  /*---- Footer ----*/
+  footer {
+    padding: 5px;
+    text-align: center;
+  }
+ 
+  /*---- Layout ----*/
+  .bodygroup {
+    clear: both;
+    margin: 0 auto;
+    width: 800px;
+	}
+    /*---- banner ----*/
+	.bodygroup1 {
+    clear: both;
+    margin: 0 auto;
+    width: 600px;
+	}
+    /*---- banner ----*/
+  #banner {
+    margin: 0 auto;
+    padding: 2.5em 0 0 0;
+  }
+  #banner h1 a:link, #banner h1 a:visited {
+    color: #000305;
+    display: block;
+    font-weight: bold;
+    margin: 0 0 .1em .2em;
+    text-decoration: none;
+    width: 800px;
+  }
+  #banner h1 a:hover, #banner h1 a:active {
+    background: none;
+    color: #C74350;
+    text-shadow: none;
+  }
+  #banner h1 strong {font-size: 0.75em; font-weight: normal;}
+  
+  /*---- banner ----*/
+ 
+  · · ·
+ 
+  /* nav */
+  #banner nav {
+    background: #191970;
+    font-size: 1.143em;
+    height: 45px;
+    line-height: 60px;
+    margin: 0 auto 2em auto;
+    padding: 0;
+    text-align: center;
+	width:800;
+    }
+  #banner nav ul {list-style: none; margin: 0 auto;width:800;}
+  #banner nav li {float: left; display: inline; margin: 0; background-color: darkblue; }
+  #banner nav a:link, #banner nav a:visited {
+    color: #fff;
+    display: inline-block;
+    height: 35px;
+    padding: 5px 1.5em;
+    text-decoration: none;
+	font-size: 14.6px;
+  }
+  #banner nav a:active, #banner nav .active a:link, #banner nav .active a:visited {
+    background: #4682B4;
+    color: #fff;
+    text-shadow: none !important;
+  }
+  #banner nav a:hover {
+    background: #6B9BC3;
+    color: #fff;
+    text-shadow: none !important;
+  }
+  
+  figure {float: left; margin: -0.8em -16em -0.8em 0.5em; }
+  
+   #first, #second, #third, #fourth {
+    background: #fff;
+    margin-bottom: 2em;
+    overflow: hidden;
+    padding: 20px 20px;
+    width: 800px;
+	text-align: justify;
+	}
+  
+  
+  #first h2, #second h2, #third h2, #fourth h2 {color: #4682B4; font-size: 1.714em; margin-bottom: 0.333em;}
+  #first h3, #second h3, #third h3, #fourth h3 {font-size: 1.429em; margin-bottom: .5em;}
+  #third, #fourth { height: 400px; }
+ 
+/*---- menu activation -----*/
+  .hidediv {
+    display: none;
+  }
+  .showdiv {
+    display: block;
+  }
+  
+ /*---- openlayers controls -----*/
+  div.olControlZoom {
+    left: auto !important;
+    right: 10px !important;
+    top: 5px;
+  }
+  
+  .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #191970;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* image  */
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width:800px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}

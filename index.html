@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>भूमि व्यवस्थापन प्रशिक्षण केन्द्र</title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+   <!-- styles -->
+  <link rel="stylesheet" href="http://owsgip.itc.utwente.nl/base/ExtJS/resources/css/ext-all.css"/>
+  <link rel="stylesheet" href="http://owsgip.itc.utwente.nl/base/GeoExt/resources/css/geoext-all.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+ 
+  <!-- ExtJS libraries -->
+  <script src="http://owsgip.itc.utwente.nl/base/ExtJS/adapter/ext/ext-base.js"></script>
+  <script src="http://owsgip.itc.utwente.nl/base/ExtJS/ext-all.js"></script>
+ 
+
+  <!-- Geo Scripts -->
+  <script src="http://maps.google.com/maps/api/js?v=3.6&sensor=false"></script>
+  <script src="http://owsgip.itc.utwente.nl/base/OpenLayers/OpenLayers.js"></script>
+  <script src="http://owsgip.itc.utwente.nl/base/GeoExt/lib/GeoExt.js"></script>
+  
+   <!-- the control script -->
+  <script src="scripts/control.js"></script>
+ </head>
+<body style="background-color:#38ACEC;">
+
+  <header id="banner" class="bodygroup">
+   <figure><img src="image\logo.png" alt="NEPAL GOVENMENT" style="width:25%"></figure>
+   <h1><strong><a href="http://nepal.gov.np">Nepal Government</a><a href="https://molcpa.gov.np/">Ministry of Land Management,Co-operative and Poverty allevation</a></strong><a href="https://lmtc.gov.np">Land Management Training Center</a></h1></br>
+   <nav><ul>
+       <li id="home-li" class="active"><a href="#" onclick="switchDivs('home-'); return false;">Home</a></li>
+	   <li id="organization-li"><a href="#" onclick="switchDivs('organization-'); return false;">Organization</a></li>
+       <li id="journal-li"><a href="#"  onclick="switchDivs('journal-'); return false;">Journal</a></li> 
+		<li id="workshop-li"><a href="https://lmtc.gov.np/workshop/">International Workshop</a></li>
+	  <li id="visit-li"><a href="docs\VisitLMTC2020_final.pdf">Visit LMTC 2020</a></li>
+      <li id="contact-li"><a href="#" onclick="switchDivs('contact-'); return false;">Contact</a></li>
+    </ul></nav></br>
+	
+	 </header>
+ 
+  <div id="home-div">
+  
+  
+		
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="image\3.jpg" style="width:100%">
+  <div class="text">1</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="image\1.jpg" style="width:100%">
+  <div class="text">2</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="image\2.jpg" style="width:100%">
+  <div class="text">3</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="image\4.jpg" style="width:100%">
+  <div class="text">4</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>  
+</div>
+	
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+  
+  
+		<section id="first" class="bodygroup">
+			<hgroup>
+				<h2>Spatial Data Viewer</h2>
+				<h3>Using Google maps, OpenStreetMap and OGC services</h3>
+			</hgroup>
+		<article>
+				<div id="viewer-panel"></div>
+					</article>
+		</section>
+  
+     <!-- home -->
+   
+  
+		<section id="first" class="bodygroup">
+			<hgroup>
+				<h2>Message From Executive Director</h2>
+				<h3>Dear Viewers</h3>
+			</hgroup>
+			<article>
+				<img src="image/ED.jpg" alt="Mr. Ganesh Bhatta" style="width:200px;height:200px;margin-left:15px;float: right">
+				<p> I extend heartiest thankfulness and warmest welcome to you for viewing the official website of the Land Management Center (LMTC). LMTC is a government organization under the Ministry of Land Management, Cooperatives and Poverty Alleviation of the Government of Nepal. LMTC is situated at Dhulikhel of Kavrepalanchok district.
+				In the history of Surveying and Mapping education in Nepal, formal education began with the establishment of Survey Training Center (Napi Talim Kendra) in July, 1968. The center has been playing a key role in producing the human resources for different levels as per the need of the Government of Nepal over the years. Initially, the center was established to fulfill the then requirements of land surveyors (amin) to carry out systematic cadastral survey in the country. The center was mandated to produce land surveyors (amin) by conducting Amin Training of eight months duration. Soon after the commencement of the Amin Training, Junior Survey’ Training of one year duration was introduced to produce Surveyors or Survey Inspectors. In November 1971, after three years of the establishment of the center, Senior Survey Training of one year duration was launched in order to produce human resources who could work as Survey Officers.</p>
+				<p>Realizing the impact it had in the field of surveying and mapping, Government of Nepal upgraded the then Survey Training Center to Land Management Training Center (LMTC) in July, 2000, and designated additional responsibility to conduct training courses for the capacity building in the Lland Management sector, in addition to Surveying and Mapping.</p>
+				<p>Convinced with the need of the time to conduct the academic programs in the field of Surveying and Mapping in the country, the center joined hands with Kathmandu University and launchedto run undergraduate course in Geomatics Engineering in 2007. This collaboration has continued with the additional courses namely Master of Land Administration and Geoinformatics, and Diploma in Geomatics Engineering. Council of Technical Education and Vocational Training (CTEVT) is also a partner of the collaboration for the Diploma course.</p>
+				<p>A number of short-term courses are also being offeredf at the center to enhance the capacity of the civil personnel working in the sector of Surveying and Mapping, and Land Administration in the country. The recent target of the center is to contribute in the capacity development of the Local Government in Land Management sector.
+				The center has set its vision to be the “Center of Excellence in Land Management and Geomatics Education”. In order to meet this vision, the center is working towards enhancing the capacity of the center itself. The center has initiated research based activities in the sector of Geomatics and Land Management mainly focusing in the institutional development and policy reform. The center has started to publish a scientific journal entitled “Journal of Land Management and Geomatics Education” as an annual publication and other various programs on capacity development of the center are in thorough plan.
+				Our best efforts are underway to meet the vision of the center. Please explore the information included in the website and do not hesitate to contact us if you have any query and critical/constructive feedback.</p>
+				Thanking you</br>
+				Ganesh Prasad Bhatta</br>
+				Executive Director</br>
+				LMTC
+			</article>
+		</section>
+ 
+		
+	</div>
+  
+  <!-- organization -->  
+	<div id="organization-div" class="hidediv">
+	<section id="second" class="bodygroup">
+			<hgroup>
+				<h2>Introduction</h2>
+			</hgroup>
+			<article>
+					<p>INTRODUCTION</br>
+
+						Land Management Training Center (LMTC), under the Ministry of Land Management, Cooperatives and Poverty Alleviation, Government of Nepal was established in 1968. LMTC is the oldest and the only governmental institution continually and significantly producing human resources and enhancing capacity of the government personnel in the field of Surveying and Mapping, and Land Management since its establishments. The center has already produced more than 7,000 land professionals at different levels through various types of training courses.</br>
+
+						LMTC has been conducting wide range of long and short term training incorporating state-of-art modern technologies. Moreover, LMTC has been collaborating to run academic courses with Kathmandu University (KU) and Council for Technical Education and Vocational Training (CTEVT).</p>
+
+					<p>VISION</br>
+						-To be the Center of Excellence in Land Management and Geomatics Education.</p>
+
+					<p>MISSION</br>
+							-To conduct academic courses, professional trainings, refresher courses and research in Land Management and Geomatics sector for the production of qualified and skilled human resources.</p>
+
+					<p>OBJECTIVES</br>
+
+						· To produce qualified and skilled human resources in the field of Surveying, Mapping, Geo-information and Land Management.</br>
+
+						· To conduct and promote research and development activities in the field of Surveying and Mapping, Geoinformation and Land Management.</br>
+
+						· To establish collaborative relationship with national and international institutions for mutual benefit by knowledge sharing, professional trainings and technology transfer.</p>
+
+					<p>FUTURE PLANS</br>
+
+						·  To contribute in Policy Research in the sector of Geomatics and Land Management.</br>
+
+						·  To contribute to capacity Building of Local Governments in the sector of Geomatics and Land Management</br>
+
+						·  To extend collaboration with academia and regional training institutions.</p>
+			</article>
+		</section>
+		<section id="third" class="bodygroup">
+			<hgroup>
+				<h2>Contact Us</h2>
+			</hgroup>
+		<article>
+		<h1>Land Management Training Center</h1>
+		Ministry of Land Management, Cooperatives and Poverty Alleviation</br>
+		Government of Nepal</br>
+
+		</br>Address: Dhulikhel, Kavre</br>
+
+		Phone: +977-011- 415055 / 51</br>
+
+		Fax: +977- 011 - 415078</br>
+
+		Website: http://www.lmtc.gov.np</br>
+
+		e-mail: info@lmtc.gov.np</br>
+	
+		GPO Box No: 12695</br>
+		</article>
+		</section>
+		
+	</div>  <!-- organization -->
+  
+	<!-- contact -->  
+	<div id="contact-div" class="hidediv">
+		<section id="third" class="bodygroup">
+			<hgroup>
+				<h2>Contact Information</h2>
+			</hgroup>
+		<article>
+		<img src="image/contact.jpg" alt="contact" style="width:350px;height:350px;margin-left:15px;float:right">
+			Email:binod.hmgn@gmail.com <br>
+			Phone: +9779851170408 <br>
+			Address: Panauti-4, Kavrepalanchok
+		</article>
+		</section>
+	</div>  
+ 
+	<div id="journal-div" class="hidediv">
+		<section id="third" class="bodygroup1">
+			<hgroup>
+				<h2>Journal of Land Management and Education</h2>
+			</hgroup>
+		<article>
+			<a href="docs\lmtc-journal.pdf">Journal of Land Management and Education</a> <br>
+			<a href="docs\LMTCguidelines_authors.docx">Templete for article</a>
+			</article>
+		</section>
+	</div>
+	
+<footer >
+     <p>Updated on March 22nd, 2020 by <a>Binod Humagain</a></br><a>Copyright ©</a><a href="http://lmtc.gov.np"> Land Management Training Center, Dhulikhel, Kavre<a></p></p>
+ </footer>
+ 
+</body>
+ 
+</html>
