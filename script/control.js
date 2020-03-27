@@ -15,7 +15,6 @@ function switchDivs(thisEl) {
 };
 //-- Mapping functions
 Ext.onReady(function() {
- 
   var sm = new OpenLayers.Projection("EPSG:3857");  //Spherical Mercator
   var wgs = new OpenLayers.Projection("EPSG:4326");  //WGS84
  
